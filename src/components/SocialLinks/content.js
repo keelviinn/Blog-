@@ -1,5 +1,9 @@
 const links = [
   {
+    label: 'Linkedin',
+    url: 'https://www.linkedin.com/in/khenriqqe/'
+  },
+  {
     label: 'Github',
     url: 'https://github.com/keelviinn'
   },

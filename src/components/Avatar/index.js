@@ -9,7 +9,7 @@ export default function Avatar() {
       query {
         avatarImage: file(relativePath: { eq: "profile.png" }) {
           childImageSharp {
-            fixed(width: 60, height: 60) {
+            fixed(width: 80, height: 80) {
               ...GatsbyImageSharpFixed
             }
           }
