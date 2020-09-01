@@ -7,7 +7,7 @@ import {
   ProfileAuthor,
   ProfilePosition,
   ProfileDescription
-} from './styled';
+} from './styles';
 
 import Avatar from '../Avatar';
 

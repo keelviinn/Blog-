@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Sidebar from '../Sidebar';
 
 import GlobalStyles from '../../styles/global';
-import { LayoutWrapper, LayoutMain } from './styled' 
+import { LayoutWrapper, LayoutMain } from './styles' 
 
 const Layout = ({ children }) => {
   return (
