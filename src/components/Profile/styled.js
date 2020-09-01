@@ -13,10 +13,11 @@ export const ProfileLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   transition: color 0.5s;  
-  
+
   &:hover {
     color: #1fa1f2;
-`;
+  }    
+`
 
 export const ProfileAuthor = styled.h1`
   font-size: 1.6rem;
