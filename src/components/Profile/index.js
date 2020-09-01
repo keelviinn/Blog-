@@ -1,7 +1,15 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Avatar from '../Avatar'
+import { 
+  ProfileWrapper, 
+  ProfileLink, 
+  ProfileAuthor,
+  ProfilePosition,
+  ProfileDescription
+} from './styled';
+
+import Avatar from '../Avatar';
 
 export default function Profile() {
   const { 
@@ -27,11 +35,17 @@ export default function Profile() {
   )
 
   return (
-    <div className="Profile-wrapper">
-      <Avatar />
-      <h1>{title}</h1>
-      <h2>{position}</h2>
-      <p>{description}</p>
-    </div>
+    <ProfileWrapper>
+      <ProfileLink>
+        <Avatar />
+        <ProfileAuthor>
+          {title}
+          <ProfilePosition>
+            {position}
+          </ProfilePosition>
+        </ProfileAuthor>        
+      </ProfileLink>      
+      <ProfileDescription>{description}</ProfileDescription>
+    </ProfileWrapper>
   )
 }
