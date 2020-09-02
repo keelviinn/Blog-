@@ -24,7 +24,7 @@ export const PostItemTag = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.background};
+  background: ${props => props.background ? props.background : '#1fa1f2'};
   border-radius: 50%;
   color: #fff;
   font-size: 1.3rem;
