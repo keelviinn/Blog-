@@ -3,7 +3,7 @@
   title: Lorem lorem ipsum
   description: And I'm not sure about the universe.
   category: JS
-  background: "#7AAB13"   
+  background: yellow   
 ---
 
 
