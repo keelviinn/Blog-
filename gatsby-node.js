@@ -22,35 +22,63 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+//To create a new page when the user click on the post at list.
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  
+
   return graphql(`
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
+    {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        edges {
+          node {
+            fields {
+              slug
             }
+            frontmatter {
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
           }
         }
       }
-    `).then(result => {
+    }
+  `).then(result => {
+    const posts = result.data.allMarkdownRemark.edges
+
     if (result.errors) {
       throw result.errors
     }
 
     // Create blog post pages.
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    posts.forEach(({ node }) => {
       createPage({
         // Path for this page — required
         path: `${node.fields.slug}`,
-        component: path.resolve("./src/templates/blog-post.js"),
+        component: path.resolve('./src/templates/blog-post.js'),
         context: {
-          slug: node.fields.slug
+          slug: node.fields.slug,
         },
+      })
+    })
+
+    //To create an pagination
+    const postsPerPage = 6 
+    const numPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: index === 0 ? `/` : `page/${i + 1}`,
+        component: path.resolve(`./src/templates/blog-list.js`),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numPages,
+          currentPage: index + 1
+        }
       })
     })
   })
