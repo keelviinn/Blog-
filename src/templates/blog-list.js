@@ -2,11 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import PostItem from '../components/PostItem';
+import Pagination from '../components/Pagination';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 export default function BlogList(props) {
   const postList = props.data.allMarkdownRemark.edges
+
+  const { currentPage, numPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = (currentPage - 1 === 1 ? "/" : (currentPage - 1)).toString()
+  const nextPage = (currentPage + 1).toString()
   
   return (
     <Layout>
@@ -35,7 +42,16 @@ export default function BlogList(props) {
         title={title}
         description={description}
       />
-      ))}      
+      ))}  
+
+      <Pagination 
+        isFirst={isFirst} 
+        isLast={isLast}
+        currentPage={currentPage}
+        numPages={numPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />    
     </Layout>
   )
 }
@@ -43,7 +59,7 @@ export default function BlogList(props) {
 export const query = graphql`
   query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
       ) {
