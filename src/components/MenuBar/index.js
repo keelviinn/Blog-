@@ -17,19 +17,19 @@ import {
 export default function MenuBar() {
   return (
     <MenuBarWrapper>
-    <MenuBarGroup>
-      <MenuBarLink to="/" title="Voltar para Home">
-        <MenuBarItem><HomeSmile /></MenuBarItem>
-      </MenuBarLink>
-      <MenuBarLink to="/search" title="Pesquisar">
-        <MenuBarItem><Search /></MenuBarItem>
-      </MenuBarLink>
-    </MenuBarGroup>
-    <MenuBarGroup>
-      <MenuBarItem title="Mudar o Tema"><BulbOff /></MenuBarItem>
-      <MenuBarItem title="Mudar Visualização"><GridAlt /></MenuBarItem>
-      <MenuBarItem title="Ir para o Topo"><UpArrowAlt /></MenuBarItem>
-    </MenuBarGroup>
-  </MenuBarWrapper>
+      <MenuBarGroup>
+        <MenuBarLink to="/" title="Voltar para Home">
+          <MenuBarItem><HomeSmile /></MenuBarItem>
+        </MenuBarLink>
+        <MenuBarLink to="/search" title="Pesquisar">
+          <MenuBarItem><Search /></MenuBarItem>
+        </MenuBarLink>
+      </MenuBarGroup>
+      <MenuBarGroup>
+        <MenuBarItem title="Mudar o Tema"><BulbOff /></MenuBarItem>
+        <MenuBarItem title="Mudar Visualização"><GridAlt /></MenuBarItem>
+        <MenuBarItem title="Ir para o Topo"><UpArrowAlt /></MenuBarItem>
+      </MenuBarGroup>
+    </MenuBarWrapper>
   )  
 }
