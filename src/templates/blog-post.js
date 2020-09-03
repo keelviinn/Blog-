@@ -1,5 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
+
+import RecommendedPosts from '../components/RecommendedPosts';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -12,8 +14,10 @@ import {
   MainContent
 } from '../components/Post/styles';
 
-export default function BlogPost({ data }) {
-  const post = data.markdownRemark
+export default function BlogPost({ data, pageContext }) {
+  const post = data.markdownRemark;
+  const next = pageContext.nextPost;
+  const previous = pageContext.previousPost;
   
   return (
     <Layout>
@@ -27,7 +31,8 @@ export default function BlogPost({ data }) {
         </PostHeader>
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </MainContent>        
+        </MainContent>  
+        <RecommendedPosts next={next} previous={previous} />      
     </Layout>
   )
 }

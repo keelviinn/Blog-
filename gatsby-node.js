@@ -43,6 +43,22 @@ exports.createPages = ({ graphql, actions }) => {
             }
             timeToRead
           }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
         }
       }
     }
@@ -55,14 +71,16 @@ exports.createPages = ({ graphql, actions }) => {
     const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
 
-    // Create blog post pages.
-    posts.forEach(({ node }) => {
+    // Create blog a post page.
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         // Path for this page — required
         path: `${node.fields.slug}`,
         component: path.resolve('./src/templates/blog-post.js'),
         context: {
           slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous
         },
       })
     })
@@ -71,14 +89,14 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/` : `/${i + 1}`,
-        component: path.resolve("./src/templates/blog-list.js"),
+        component: path.resolve('./src/templates/blog-list.js'),
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
         },
-      });
-    });
-  });
+      })
+    })
+  })
 }
