@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const PostItemLink = styled(Link)`
-  color: #8899a6;
+  color: var(--text);
   display: flex;
   text-decoration: none;
   transition: color 0.2s;
   
   &:hover {
-    color: #1fa1f2;
+    color: var(--highLight);
   }
 `;
 
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #38444d;  
+  border-bottom: 1px solid var(--borders)ders;  
   padding: 2rem 3rem;
   width: 100%;
 `;
@@ -24,9 +24,9 @@ export const PostItemTag = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.background ? props.background : '#1fa1f2'};
+  background: ${props => props.background ? props.background : 'var(--highLight)'};
   border-radius: 50%;
-  color: #fff;
+  color: var(--postColor);
   font-size: 1.3rem;
   font-weight: 700;
   min-height: 90px;

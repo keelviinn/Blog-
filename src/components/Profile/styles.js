@@ -5,17 +5,17 @@ export const ProfileWrapper = styled.section`
   display: flex;
   flex-direction: column;
   
-  color: #8899a6;
+  color: var(--text);
 `;
 
 export const ProfileLink = styled(Link)`
-  color: #8899a6;
+  color: var(--text);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.5s;  
 
   &:hover {
-    color: #1fa1f2;
+    color: var(--highLight);
   }    
 `
 

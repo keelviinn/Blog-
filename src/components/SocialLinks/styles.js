@@ -17,12 +17,12 @@ export const SocialLinksItem = styled.li`
 `;
 
 export const SocialLinksLink = styled.a`
-  color: #8899a6;
+  color: var(--text);
   text-decoration: none;
   transition: color 0.5s;
   
   &:hover {
-    color: #1fa1f2;
+    color: var(--highLight);
   }
 `
 
