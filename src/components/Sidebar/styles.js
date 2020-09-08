@@ -10,6 +10,6 @@ export const SidebarWrapper = styled.aside`
   width: 20rem;
   position: fixed;
   padding: 2rem;
-  border-right: 1px solid var(--borders)ders;
+  border-right: 1px solid var(--borders);
   background: var(--mediumBackground);  
 `;

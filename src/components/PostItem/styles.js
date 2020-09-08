@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const PostItemLink = styled(Link)`
-  color: var(--text);
+  color: var(--texts);
   display: flex;
   text-decoration: none;
   transition: color 0.2s;
@@ -15,7 +15,7 @@ export const PostItemLink = styled(Link)`
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--borders)ders;  
+  border-bottom: 1px solid var(--borders);  
   padding: 2rem 3rem;
   width: 100%;
 `;

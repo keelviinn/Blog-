@@ -5,11 +5,11 @@ export const ProfileWrapper = styled.section`
   display: flex;
   flex-direction: column;
   
-  color: var(--text);
+  color: var(--texts);
 `;
 
 export const ProfileLink = styled(Link)`
-  color: var(--text);
+  color: var(--texts);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.5s;  
