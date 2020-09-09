@@ -1,28 +1,32 @@
 import React from 'react';
-import propTypes from "prop-types"
+import propTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import { PaginationWrapper } from './styles';
 
-export default function Pagination({ 
-  isFirst, 
-  isLast, 
-  currentPage, 
-  numPages, 
+export default function Pagination({
+  isFirst,
+  isLast,
+  currentPage,
+  numPages,
   prevPage,
-  nextPage
+  nextPage,
 }) {
   return (
     <PaginationWrapper>
-      {!isFirst && 
-        <Link to={prevPage}>Anterior</Link>
-      }
-       
-      <p>{currentPage} de {numPages}</p>
-      
-      {!isLast && 
-        <Link to={nextPage}>Próximo</Link>
-      }
+      {!isFirst
+        && <Link to={prevPage}>Anterior</Link>}
+
+      <p>
+        {currentPage}
+        {' '}
+        de
+        {' '}
+        {numPages}
+      </p>
+
+      {!isLast
+        && <Link to={nextPage}>Próximo</Link>}
     </PaginationWrapper>
   );
 }

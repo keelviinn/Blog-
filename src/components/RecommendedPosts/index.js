@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { RecommendedWrapper, RecommendedLink } from './styles'
+import { RecommendedWrapper, RecommendedLink } from './styles';
 
 export default function RecommendedPosts({ next, previous }) {
   return (
@@ -17,7 +17,7 @@ export default function RecommendedPosts({ next, previous }) {
         </RecommendedLink>
       )}
     </RecommendedWrapper>
-  )
+  );
 }
 
 RecommendedPosts.propTypes = {
@@ -37,4 +37,4 @@ RecommendedPosts.propTypes = {
       slug: propTypes.string.isRequired,
     }),
   }),
-}
+};

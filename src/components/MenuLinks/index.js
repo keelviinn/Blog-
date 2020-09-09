@@ -2,12 +2,12 @@ import React from 'react';
 
 import links from './content';
 
-import { 
+import {
   MenuLinksWeapper,
   MenuLinksList,
   MenuLinksItem,
-  MenuLinksLink
- } from './styles';
+  MenuLinksLink,
+} from './styles';
 
 const MenuLinks = () => (
   <MenuLinksWeapper>
@@ -17,10 +17,10 @@ const MenuLinks = () => (
           <MenuLinksLink to={link.url} activeClassName="active">
             {link.label}
           </MenuLinksLink>
-        </MenuLinksItem>           
+        </MenuLinksItem>
       ))}
     </MenuLinksList>
   </MenuLinksWeapper>
-)
+);
 
 export default MenuLinks;

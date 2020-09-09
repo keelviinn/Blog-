@@ -8,17 +8,17 @@ import {
   PostItemInfo,
   PostItemDate,
   PostItemTitle,
-  PostItemDescription
+  PostItemDescription,
 } from './styles';
 
 export default function PostItem({
-  slug, 
+  slug,
   background,
-  category, 
-  date, 
-  timeToRead, 
-  title, 
-  description
+  category,
+  date,
+  timeToRead,
+  title,
+  description,
 }) {
   return (
     <PostItemLink to={slug}>
@@ -28,7 +28,13 @@ export default function PostItem({
         </PostItemTag>
         <PostItemInfo>
           <PostItemDate>
-            {date} • {timeToRead} min de leitura
+            {date}
+            {' '}
+            •
+            {' '}
+            {timeToRead}
+            {' '}
+            min de leitura
           </PostItemDate>
           <PostItemTitle>
             {title}
@@ -39,7 +45,7 @@ export default function PostItem({
         </PostItemInfo>
       </PostItemWrapper>
     </PostItemLink>
-  )  
+  );
 }
 
 PostItem.propTypes = {
@@ -49,5 +55,5 @@ PostItem.propTypes = {
   date: PropTypes.string.isRequired,
   timeToRead: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 };

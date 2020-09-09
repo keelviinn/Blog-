@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { AvatarWrapper } from './styles'
+import { AvatarWrapper } from './styles';
 
 export default function Avatar() {
   const { avatarImage } = useStaticQuery(
@@ -15,8 +15,8 @@ export default function Avatar() {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  return <AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />
+  return <AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />;
 }

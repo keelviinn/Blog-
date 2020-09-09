@@ -11,7 +11,7 @@ const Sidebar = () => (
     <Profile />
     <SocialLinks />
     <MenuLinks />
-  </SidebarWrapper>  
-)
+  </SidebarWrapper>
+);
 
 export default Sidebar;

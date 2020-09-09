@@ -17,10 +17,10 @@ export default function Comments({ url, title }) {
         url={completeURL}
       />
     </CommentsWrapper>
-  )
+  );
 }
 
 Comments.propTypes = {
   url: propTypes.string.isRequired,
-  title: propTypes.string.isRequired
-}
+  title: propTypes.string.isRequired,
+};

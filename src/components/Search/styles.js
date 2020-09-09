@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const SearchWrapper = styled.section`
   background: var(--background);
@@ -62,4 +62,4 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox-reset {
     display: none;
   }
-`
+`;

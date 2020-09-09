@@ -3,7 +3,7 @@ import React from 'react';
 import Icons from './Icons';
 import links from './content';
 
-import { 
+import {
   SocialLinksWrapper,
   SocialLinksList,
   SocialLinksItem,
@@ -15,20 +15,18 @@ const SocialLinks = () => (
   <SocialLinksWrapper>
     <SocialLinksList>
       {links.map((link, i) => {
-        const Icon = Icons[link.label]  
-        
-        const id = links.map((link, i) => {
-          return link.id = i + 1
-        })
+        const Icon = Icons[link.label];
 
-        console.log(id)
+        const id = links.map((link, i) => link.id = i + 1);
+
+        console.log(id);
 
         return (
           <SocialLinksItem key={id}>
-            <SocialLinksLink 
-              href={link.url} 
-              title={link.label} 
-              target="_blank" 
+            <SocialLinksLink
+              href={link.url}
+              title={link.label}
+              target="_blank"
               rel="noopener noreferrer"
             >
               <IconWrapper>
@@ -36,10 +34,10 @@ const SocialLinks = () => (
               </IconWrapper>
             </SocialLinksLink>
           </SocialLinksItem>
-        )
+        );
       })}
     </SocialLinksList>
   </SocialLinksWrapper>
-)
+);
 
 export default SocialLinks;

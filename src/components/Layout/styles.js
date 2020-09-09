@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 
 export const LayoutWrapper = Styled.section`
   display: flex;
-`
+`;
 
 export const LayoutMain = Styled.main`
   background: var(--background);
@@ -15,4 +15,4 @@ export const LayoutMain = Styled.main`
       "posts"
       "pagination"; 
   }
-`
+`;

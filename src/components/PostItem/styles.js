@@ -35,7 +35,7 @@ export const PostItemTag = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.background ? props.background : 'var(--highLight)'};
+  background: ${(props) => (props.background ? props.background : 'var(--highLight)')};
   border-radius: 50%;
   color: var(--postColor);
   font-size: 1.3rem;

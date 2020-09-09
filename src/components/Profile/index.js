@@ -1,25 +1,25 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { 
-  ProfileWrapper, 
-  ProfileLink, 
+import {
+  ProfileWrapper,
+  ProfileLink,
   ProfileAuthor,
   ProfilePosition,
-  ProfileDescription
+  ProfileDescription,
 } from './styles';
 
 import Avatar from '../Avatar';
 
 export default function Profile() {
-  const { 
+  const {
     site: {
       siteMetadata: {
         title,
         position,
-        description
+        description,
       },
-    }, 
+    },
   } = useStaticQuery(
     graphql`
       query SiteMetaData {
@@ -31,8 +31,8 @@ export default function Profile() {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
   return (
     <ProfileWrapper>
@@ -43,9 +43,9 @@ export default function Profile() {
           <ProfilePosition>
             {position}
           </ProfilePosition>
-        </ProfileAuthor>        
-      </ProfileLink>      
+        </ProfileAuthor>
+      </ProfileLink>
       <ProfileDescription>{description}</ProfileDescription>
     </ProfileWrapper>
-  )
+  );
 }

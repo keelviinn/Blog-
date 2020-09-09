@@ -12,7 +12,7 @@ import {
   MenuBarWrapper,
   MenuBarGroup,
   MenuBarLink,
-  MenuBarItem
+  MenuBarItem,
 } from './styles';
 
 export default function MenuBar() {
@@ -23,11 +23,11 @@ export default function MenuBar() {
   const isListMode = display === 'list';
 
   useEffect(() => {
-    setTheme(window.__theme)
-    setDisplay(window.__display)
-    
-    window.__onThemeChange = () => setTheme(window.__theme)
-    window.__onDisplayChange = () => setDisplay(window.__display)
+    setTheme(window.__theme);
+    setDisplay(window.__display);
+
+    window.__onThemeChange = () => setTheme(window.__theme);
+    window.__onDisplayChange = () => setDisplay(window.__display);
   }, []);
 
   return (
@@ -41,25 +41,25 @@ export default function MenuBar() {
         </MenuBarLink>
       </MenuBarGroup>
       <MenuBarGroup>
-        <MenuBarItem 
+        <MenuBarItem
           title="Mudar o Tema"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
           }}
           className={theme}
-        >          
-          {isDarkMode ? <BulbOff /> : <BulbOn />}  
+        >
+          {isDarkMode ? <BulbOff /> : <BulbOn />}
         </MenuBarItem>
-        <MenuBarItem 
+        <MenuBarItem
           title="Mudar Visualização"
           onClick={() => {
-            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+            window.__setPreferredDisplay(isListMode ? 'grid' : 'list');
           }}
         >
-          {isListMode ? <GridAlt /> : <ListAlt />} 
+          {isListMode ? <GridAlt /> : <ListAlt />}
         </MenuBarItem>
         <MenuBarItem title="Ir para o Topo"><UpArrowAlt /></MenuBarItem>
       </MenuBarGroup>
     </MenuBarWrapper>
-  )  
-};
+  );
+}

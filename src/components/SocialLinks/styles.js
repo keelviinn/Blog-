@@ -24,10 +24,10 @@ export const SocialLinksLink = styled.a`
   &:hover {
     color: var(--highLight);
   }
-`
+`;
 
 export const IconWrapper = styled.div`
   fill: #bbb;
   width: 30px;
   height: 30px;
-`
+`;

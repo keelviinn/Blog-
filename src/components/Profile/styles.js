@@ -17,7 +17,7 @@ export const ProfileLink = styled(Link)`
   &:hover {
     color: var(--highLight);
   }    
-`
+`;
 
 export const ProfileAuthor = styled.h1`
   font-size: 1.6rem;
@@ -35,4 +35,3 @@ export const ProfileDescription = styled.p`
   font-weight: 300;
   line-height: 1.4;
 `;
-
