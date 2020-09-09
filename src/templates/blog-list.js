@@ -24,9 +24,7 @@ export default function BlogList(props) {
         {postList.map(
           ({
             node: {
-              frontmatter: {
-                background, category, date, description, title,
-              },
+              frontmatter: { background, category, date, description, title },
               timeToRead,
               fields: { slug },
             },
@@ -40,7 +38,7 @@ export default function BlogList(props) {
               title={title}
               description={description}
             />
-          ),
+          )
         )}
       </ListWeapper>
 

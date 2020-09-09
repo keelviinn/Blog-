@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 export const ProfileWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  
+
   color: var(--texts);
 `;
 
@@ -12,11 +12,11 @@ export const ProfileLink = styled(Link)`
   color: var(--texts);
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.5s;  
+  transition: color 0.5s;
 
   &:hover {
     color: var(--highLight);
-  }    
+  }
 `;
 
 export const ProfileAuthor = styled.h1`

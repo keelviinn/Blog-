@@ -57,7 +57,7 @@ export const SearchWrapper = styled.section`
       color: var(--texts);
     }
   }
-  
+
   .ais-SearchBox-submit,
   .ais-SearchBox-reset {
     display: none;

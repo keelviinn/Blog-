@@ -17,7 +17,7 @@ const SocialLinks = () => (
       {links.map((link, i) => {
         const Icon = Icons[link.label];
 
-        const id = links.map((link, i) => link.id = i + 1);
+        const id = links.map((link, i) => (link.id = i + 1));
 
         console.log(id);
 

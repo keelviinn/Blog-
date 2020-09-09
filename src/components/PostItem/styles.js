@@ -10,7 +10,7 @@ export const PostItemLink = styled(Link)`
   body#grid & {
     background-color: var(--background);
   }
-  
+
   &:hover {
     color: var(--highLight);
   }
@@ -19,7 +19,7 @@ export const PostItemLink = styled(Link)`
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--borders);  
+  border-bottom: 1px solid var(--borders);
   padding: 2rem 3rem;
   width: 100%;
 
@@ -35,7 +35,8 @@ export const PostItemTag = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${(props) => (props.background ? props.background : 'var(--highLight)')};
+  background: ${(props) =>
+    props.background ? props.background : 'var(--highLight)'};
   border-radius: 50%;
   color: var(--postColor);
   font-size: 1.3rem;

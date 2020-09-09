@@ -23,25 +23,13 @@ export default function PostItem({
   return (
     <PostItemLink to={slug}>
       <PostItemWrapper>
-        <PostItemTag background={background}>
-          {category}
-        </PostItemTag>
+        <PostItemTag background={background}>{category}</PostItemTag>
         <PostItemInfo>
           <PostItemDate>
-            {date}
-            {' '}
-            •
-            {' '}
-            {timeToRead}
-            {' '}
-            min de leitura
+            {date} • {timeToRead} min de leitura
           </PostItemDate>
-          <PostItemTitle>
-            {title}
-          </PostItemTitle>
-          <PostItemDescription>
-            {description}
-          </PostItemDescription>
+          <PostItemTitle>{title}</PostItemTitle>
+          <PostItemDescription>{description}</PostItemDescription>
         </PostItemInfo>
       </PostItemWrapper>
     </PostItemLink>

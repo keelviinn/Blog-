@@ -13,7 +13,7 @@ export const MenuBarWrapper = styled.aside`
   right: 0;
   width: 3.75rem;
   background: var(--mediumBackground);
-  border-left: 1px solid var(--borders);  
+  border-left: 1px solid var(--borders);
 `;
 
 export const MenuBarGroup = styled.div`
@@ -37,7 +37,7 @@ export const MenuBarItem = styled.span`
 
   &.light {
     color: var(--texts);
-    
+
     &:hover {
       color: var(--highLight);
     }

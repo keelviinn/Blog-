@@ -12,15 +12,13 @@ export const SocialLinksList = styled.ul`
   list-style: none;
 `;
 
-export const SocialLinksItem = styled.li`
-
-`;
+export const SocialLinksItem = styled.li``;
 
 export const SocialLinksLink = styled.a`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
-  
+
   &:hover {
     color: var(--highLight);
   }

@@ -25,13 +25,7 @@ export default function BlogPost({ data, pageContext }) {
       <SEO title={post.frontmatter.title} />
       <PostHeader>
         <PostDate>
-          {post.frontmatter.date}
-          {' '}
-          •
-          {' '}
-          {post.timeToRead}
-          {' '}
-          min de leitura
+          {post.frontmatter.date} • {post.timeToRead} min de leitura
         </PostDate>
         <PostTitle>{post.frontmatter.title}</PostTitle>
         <PostDescription>{post.frontmatter.description}</PostDescription>

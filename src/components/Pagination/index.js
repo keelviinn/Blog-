@@ -14,19 +14,13 @@ export default function Pagination({
 }) {
   return (
     <PaginationWrapper>
-      {!isFirst
-        && <Link to={prevPage}>Anterior</Link>}
+      {!isFirst && <Link to={prevPage}>Anterior</Link>}
 
       <p>
-        {currentPage}
-        {' '}
-        de
-        {' '}
-        {numPages}
+        {currentPage} de {numPages}
       </p>
 
-      {!isLast
-        && <Link to={nextPage}>Próximo</Link>}
+      {!isLast && <Link to={nextPage}>Próximo</Link>}
     </PaginationWrapper>
   );
 }

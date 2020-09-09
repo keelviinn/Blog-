@@ -5,11 +5,11 @@ export const SidebarWrapper = styled.aside`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+
   height: 100vh;
   width: 20rem;
   position: fixed;
   padding: 2rem;
   border-right: 1px solid var(--borders);
-  background: var(--mediumBackground);  
+  background: var(--mediumBackground);
 `;

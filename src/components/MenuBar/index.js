@@ -34,10 +34,14 @@ export default function MenuBar() {
     <MenuBarWrapper>
       <MenuBarGroup>
         <MenuBarLink to="/" title="Voltar para Home">
-          <MenuBarItem><HomeSmile /></MenuBarItem>
+          <MenuBarItem>
+            <HomeSmile />
+          </MenuBarItem>
         </MenuBarLink>
         <MenuBarLink to="/search" title="Pesquisar">
-          <MenuBarItem><Search /></MenuBarItem>
+          <MenuBarItem>
+            <Search />
+          </MenuBarItem>
         </MenuBarLink>
       </MenuBarGroup>
       <MenuBarGroup>
@@ -58,7 +62,9 @@ export default function MenuBar() {
         >
           {isListMode ? <GridAlt /> : <ListAlt />}
         </MenuBarItem>
-        <MenuBarItem title="Ir para o Topo"><UpArrowAlt /></MenuBarItem>
+        <MenuBarItem title="Ir para o Topo">
+          <UpArrowAlt />
+        </MenuBarItem>
       </MenuBarGroup>
     </MenuBarWrapper>
   );

@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-export const MenuLinksWeapper = styled.nav`
-  
-`;
+export const MenuLinksWeapper = styled.nav``;
 
 export const MenuLinksList = styled.ul`
   font-size: 1.2rem;
