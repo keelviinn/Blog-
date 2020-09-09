@@ -4,8 +4,9 @@ import { HomeSmile } from '@styled-icons/boxicons-regular/HomeSmile';
 import { Search } from '@styled-icons/boxicons-regular/Search';
 import { UpArrowAlt } from '@styled-icons/boxicons-regular/UpArrowAlt';
 import { Bulb as BulbOff } from '@styled-icons/boxicons-regular/Bulb';
-// import { Bulb as BulbOn } from '@styled-icons/boxicons-solid/Bulb';
+import { Bulb as BulbOn } from '@styled-icons/boxicons-solid/Bulb';
 import { GridAlt } from '@styled-icons/boxicons-regular/GridAlt';
+import { ListAlt } from '@styled-icons/fa-regular/ListAlt';
 
 import {
   MenuBarWrapper,
@@ -16,13 +17,18 @@ import {
 
 export default function MenuBar() {
   const [theme, setTheme] = useState(null);
+  const [display, setDisplay] = useState(null);
 
-  const isDarkMode = theme === 'dark'
+  const isDarkMode = theme === 'dark';
+  const isListMode = display === 'list';
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+    
     window.__onThemeChange = () => setTheme(window.__theme)
-  }, [])
+    window.__onDisplayChange = () => setDisplay(window.__display)
+  }, []);
 
   return (
     <MenuBarWrapper>
@@ -42,9 +48,16 @@ export default function MenuBar() {
           }}
           className={theme}
         >          
-            <BulbOff />
+          {isDarkMode ? <BulbOff /> : <BulbOn />}  
         </MenuBarItem>
-        <MenuBarItem title="Mudar Visualização"><GridAlt /></MenuBarItem>
+        <MenuBarItem 
+          title="Mudar Visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+          }}
+        >
+          {isListMode ? <GridAlt /> : <ListAlt />} 
+        </MenuBarItem>
         <MenuBarItem title="Ir para o Topo"><UpArrowAlt /></MenuBarItem>
       </MenuBarGroup>
     </MenuBarWrapper>
