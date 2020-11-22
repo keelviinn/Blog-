@@ -8,6 +8,7 @@ import { Bulb as BulbOn } from '@styled-icons/boxicons-solid/Bulb';
 import { GridAlt } from '@styled-icons/boxicons-regular/GridAlt';
 import { ListAlt } from '@styled-icons/fa-regular/ListAlt';
 
+import getThemeColor from '../../utils/getThemeColor';
 import {
   MenuBarWrapper,
   MenuBarGroup,
@@ -33,12 +34,12 @@ export default function MenuBar() {
   return (
     <MenuBarWrapper>
       <MenuBarGroup>
-        <MenuBarLink cover direction="left" bg="#16202c" duration={0.6} to="/" title="Voltar para Home">
+        <MenuBarLink cover direction="left" bg={getThemeColor()} duration={0.6} to="/" title="Voltar para Home">
           <MenuBarItem>
             <HomeSmile />
           </MenuBarItem>
         </MenuBarLink>
-        <MenuBarLink cover direction="right" bg="#16202c" duration={0.6} to="/search" title="Pesquisar">
+        <MenuBarLink cover direction="right" bg={getThemeColor()} duration={0.6} to="/search" title="Pesquisar">
           <MenuBarItem>
             <Search />
           </MenuBarItem>

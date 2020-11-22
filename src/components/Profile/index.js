@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import getThemeColor from '../../utils/getThemeColor';
 import {
   ProfileWrapper,
   ProfileLink,
@@ -33,7 +34,7 @@ export default function Profile() {
 
   return (
     <ProfileWrapper>
-      <ProfileLink cover direction="left" bg="#16202c" duration={0.6} to="/">
+      <ProfileLink cover direction="left" bg={getThemeColor()} duration={0.6} to="/">
         <Avatar />
         <ProfileAuthor>
           {title}

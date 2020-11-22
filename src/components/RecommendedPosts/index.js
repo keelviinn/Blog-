@@ -1,18 +1,19 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+import getThemeColor from '../../utils/getThemeColor';
 import { RecommendedWrapper, RecommendedLink } from './styles';
 
 export default function RecommendedPosts({ next, previous }) {
   return (
     <RecommendedWrapper>
       {previous && (
-        <RecommendedLink cover direction="left" bg="#16202c" duration={0.6} to={previous.fields.slug} className="previous">
+        <RecommendedLink cover direction="left" bg={getThemeColor()} duration={0.6} to={previous.fields.slug} className="previous">
           {previous.frontmatter.title}
         </RecommendedLink>
       )}
       {next && (
-        <RecommendedLink cover direction="right" bg="#16202c" duration={0.6} to={next.fields.slug} className="next">
+        <RecommendedLink cover direction="right" bg={getThemeColor()} duration={0.6} to={next.fields.slug} className="next">
           {next.frontmatter.title}
         </RecommendedLink>
       )}
