@@ -21,7 +21,7 @@ export default function PostItem({
   description,
 }) {
   return (
-    <PostItemLink to={slug}>
+    <PostItemLink cover direction="right" bg="#16202c" duration={0.6} to={slug}>
       <PostItemWrapper>
         <PostItemTag background={background}>{category}</PostItemTag>
         <PostItemInfo>
