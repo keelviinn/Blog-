@@ -4,10 +4,11 @@ const queries = require("./src/utils/algolia_queries");
 
 module.exports = {
   siteMetadata: {
-    title: `Blog`,
-    position: `Desenvolvedor FullStack`,
-    description: `A blog about gatsby, frontend and backend developers.`,
+    title: `Kelvin Oliveira`,
+    position: `Desenvolvedor Backend Node.JS - GraphQL`,
+    description: `Um blog de desenvolvimento`,
     author: `@kelvin`,
+    age: 27,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
