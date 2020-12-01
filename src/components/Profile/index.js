@@ -15,7 +15,7 @@ import Avatar from '../Avatar';
 export default function Profile() {
   const {
     site: {
-      siteMetadata: { title, position, description, age },
+      siteMetadata: { title, position, description },
     },
   } = useStaticQuery(
     graphql`
@@ -25,7 +25,6 @@ export default function Profile() {
             title
             position
             description
-            age
           }
         }
       }

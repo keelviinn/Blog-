@@ -8,7 +8,7 @@ module.exports = {
     position: `Desenvolvedor Backend Node.JS - GraphQL`,
     description: `Um blog de desenvolvimento`,
     author: `@kelvin`,
-    age: 27,
+    siteUrl: `http://localhost:8000`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -83,6 +83,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
