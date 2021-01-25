@@ -8,7 +8,7 @@ module.exports = {
     position: `Desenvolvedor Backend Node.JS - GraphQL`,
     description: `Um blog de desenvolvimento`,
     author: `@kelvin`,
-    siteUrl: `http://localhost:8000`,
+    siteUrl: `https://thegatsbycourse.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
